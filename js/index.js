@@ -5,7 +5,7 @@ const copyright= document.createElement("p")
 copyright.innerHTML = "Onella Powell " + thisYear
 footer.appendChild(copyright)
 
-console.log(footer)
+console.log(footer);
 
 const skills = ["HTML", "CSS", "JavaScript","Visual Studios","Travel Consultant"] /* skills */
 const skillsSection = document.querySelector("#skills")
