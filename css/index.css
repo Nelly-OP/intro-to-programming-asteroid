@@ -1,5 +1,5 @@
 /*write css*/
-/*Tag selectors*/
+/*Tag Selectors*/
 
 body{           
     font-family:  'Sansita', sans-serif;
@@ -17,6 +17,7 @@ nav{
 
 
 header{
+    position: sticky;
     background: /*rgb(255, 137, 226);*/ url(https://i.redd.it/ajobw0bcf0h41.jpg);
     padding: 5px 5px;
     margin: 15px 15px;
@@ -58,7 +59,7 @@ ul{
 li{
     background: url(https://i.redd.it/ajobw0bcf0h41.jpg);
     padding: 15px 15px;
-    font-size: 30px;
+    font-size: 20px;
     margin: 25px 25px 25px 25px;
     border-radius: 10%;
     border-style: solid;
@@ -67,6 +68,9 @@ li{
 }
 
 form{
+    display:inline-block;
+     flex-wrap: wrap;
+     justify-content: space-around;
     padding: 5px 5px;
     margin: 10px 10px;
 }
@@ -131,7 +135,7 @@ footer{
 }
 
 #skills{
-    font-size: 40px;
+    font-size: 30px;
 }
 
 #messages li{
@@ -160,18 +164,23 @@ footer{
     border: dotted rgb(180, 2, 180) 10px;
 }
 
+/* Flex-box */
  .experience{
-    background: none;
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: space-around;
+     background: none;
     font-size: 20px;
-    border-style: none;
+    border-radius:10px;
     margin:15px;
 }
 
+
+/* Hover */
 .nav-link:hover{
     color: yellow;
 }
 
-/* Hover */
 a:link{
     text-decoration: none;
 }
@@ -182,6 +191,11 @@ a:hover{
 
 #name:hover{
     color: black;
+}
+
+.experience:hover{
+    background: url(https://i.redd.it/ajobw0bcf0h41.jpg);
+    color: yellow;
 }
 
 h1:hover{

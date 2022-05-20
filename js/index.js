@@ -1,4 +1,4 @@
-/* footer name and year*/ 
+/* Footer name and year*/ 
 const today= new Date() 
 const thisYear= today.getFullYear()
 const footer= document.querySelector("footer")
@@ -8,7 +8,7 @@ footer.appendChild(copyright)
 
 console.log(footer);
 
-/* skills */
+/* Skills */
 const skills = ["HTML", "CSS", "JavaScript","Visual Studios","Travel Consultant"] 
 const skillsSection = document.querySelector("#skills")
 
@@ -19,11 +19,11 @@ const skillsList = skillsSection.querySelector("ul")
        skillsList.appendChild(skill)
     }
  
-    /* form */
+    /* Form */
     const messageForm= document.getElementsByTagName("form")[0]; 
     console.log(messageForm);
 
-    /* submitting form */
+    /* Submitting Form */
 messageForm.addEventListener("submit", (event) => { 
     event.preventDefault();
   const name = event.target.name.value;
@@ -32,7 +32,7 @@ messageForm.addEventListener("submit", (event) => {
 
   console.log(event.target.name.value,event.target.email.value,event.target.message.value);
 
-  /* list of message dispaly */
+  /* List of message dispaly */
   const messageSection= document.querySelector("#messages"); 
   const messageList= messageSection.querySelector("ul");
   const newMessage= document.createElement("li"); 
@@ -40,10 +40,10 @@ messageForm.addEventListener("submit", (event) => {
   console.log(email);
   console.log(name);
 
-  /*message dispaly */
+  /* Message dispaly */
   newMessage.innerHTML= `<a href = mailto:${email}>${name}</a> wrote:<span>${message}</span>` 
 
-  /* remove button */
+  /* Remove button */
   const removeButton= document.createElement("button");  
   removeButton.innerText= "remove";
   removeButton.addEventListener("click", (event) => {
@@ -51,7 +51,7 @@ messageForm.addEventListener("submit", (event) => {
       entry.remove();
   });
 
-  /* edit button */
+  /* Edit Button */
   const editButton= document.createElement("button"); 
   editButton.textContent= "edit"; 
   editButton.addEventListener("click", (event) => {
@@ -60,7 +60,7 @@ messageForm.addEventListener("submit", (event) => {
         if (editButton.textContent === "edit") {
     console.log(entry);
 
-    /* message input to edit */
+    /* Message input to edit */
     const editText = document.createElement("input"); 
     console.log(editText);
         editText.type="text";
@@ -69,7 +69,7 @@ messageForm.addEventListener("submit", (event) => {
         entry.appendChild(editText);
         editButton.textContent = "save"; 
 
-        /* save edit */
+        /* Save edit */
         } else if (editButton.textContent === "save"){ 
             const input = entry.querySelector("input");
             console.log(input);
@@ -101,8 +101,8 @@ function toggleDarkMode() {
         textElement.style.backgroundColor = "#ffccb9"
         darkModeBtnElement.innerHTML="Change to Dark Mode"
         for (var i = 0; i<textElement.length; i++) {
-           // textElement[i].style.color = "pink"
         }
+
    // if it's in light mode, change it to dark mode
     // what does light mode look like here?
     // light mode looks like a tan background and the button will say Change to Dark Mode
@@ -111,7 +111,6 @@ function toggleDarkMode() {
         textElement.style.backgroundColor = "black"
         darkModeBtnElement.innerHTML="Change to Light Mode"
         for (var i = 0; i<textElement.length; i++) {
-            //textElement[i].style.color = "white"
         }
     }
 }
