@@ -1,0 +1,207 @@
+/*write css*/
+/*Tag selectors*/
+
+body{           
+    font-family:  'Sansita', sans-serif;
+    color: darkblue; 
+}
+
+nav{
+    background-color: rgb(249, 160, 249);
+    padding: 5px 5px;
+    margin: 20px;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+
+header{
+    background: /*rgb(255, 137, 226);*/ url(https://i.redd.it/ajobw0bcf0h41.jpg);
+    padding: 5px 5px;
+    margin: 15px 15px;
+}
+
+section{
+    padding: 5px 5px;
+    margin: 10px 10px;
+}
+
+h1{
+    color:blue;
+    padding: 5px 5px;
+    margin: 10px 10px;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+h2{
+    color:blue;
+    padding: 5px 5px;
+    margin: 10px 10px;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+p{
+    font-size: 20px;
+    padding: 20px 20px;
+    margin: 15px;
+    word-spacing: 5px;
+}
+
+ul{
+    padding: 5px 5px;
+    margin: 10px 10px;
+}
+
+li{
+    background: url(https://i.redd.it/ajobw0bcf0h41.jpg);
+    padding: 15px 15px;
+    font-size: 30px;
+    margin: 25px 25px 25px 25px;
+    border-radius: 10%;
+    border-style: solid;
+    list-style: none;
+    display: inline-block;
+}
+
+form{
+    padding: 5px 5px;
+    margin: 10px 10px;
+}
+
+label{
+    padding: 5px 5px;
+    margin: 10px 10px;
+    font-size: 20px;
+    color: rgb(180, 2, 180);
+}
+
+input{
+    padding: 5px 5px;
+    margin: 10px 10px;
+    font-size: 15px;
+    border: solid 2px ;
+}
+
+textarea{
+    padding: 5px 5px;
+    margin: 10px 10px;
+    font-size: 15px;
+    border: solid 2px ;
+}
+
+button{
+    padding: 10px 10px;
+    margin: 10px 10px;
+    background: url(https://expandedramblings.com/wp-content/uploads/2018/10/Jamaica-Statistics-and-Facts.png);
+    border-radius: 30%;
+    font-size: 15px;
+}
+
+footer{
+    padding: 2px 2px;
+    margin: 20px 5px;
+    color: rgb(252, 18, 186);
+    text-align: center;
+    background:rgb(254, 185, 254);
+}
+
+/* ID Selectors*/
+#name{
+    text-align: center;
+    font-size: 35px;
+    color: rgb(255, 13, 219);
+}
+
+#about{
+    padding: 2px 2px;
+    margin: 5px 5px;
+}
+
+#images{
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    width: 355px;
+    display: block;
+   /* padding: 5px 5px;
+    margin: 55px;*/
+}
+
+#skills{
+    font-size: 40px;
+}
+
+#messages li{
+    padding: 15px 15px;
+    margin: 10px;
+    /*background: none;*/
+}
+
+#connect{
+  display: contents;
+  font-size: 20px;
+  word-spacing: 10px;
+}
+
+/* Class Selectors */
+.nav-bar{
+    font-size: 20px;
+    background: none;
+    list-style: none;
+    border-style: none;
+    margin: 5px; 
+
+}
+
+.bio{
+    border: dotted rgb(180, 2, 180) 10px;
+}
+
+ .experience{
+    background: none;
+    font-size: 20px;
+    border-style: none;
+    margin:15px;
+}
+
+.nav-link:hover{
+    color: yellow;
+}
+
+/* Hover */
+a:link{
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+#name:hover{
+    color: black;
+}
+
+h1:hover{
+    color: yellow;
+}
+
+h2:hover{
+    color: yellow;
+}
+
+/* Media Queries */
+@media print {
+    section {
+        min-height: auto;
+    }
+}
+
+@media screen and (max-width:900px), (orientation: portrait) {
+  body { 
+      background:rgb(255, 204, 185);
+    }
+    
+}
