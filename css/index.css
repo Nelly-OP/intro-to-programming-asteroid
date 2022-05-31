@@ -1,20 +1,25 @@
 /*write css*/
 /*Tag Selectors*/
 
-body{           
+/* html{
+    background: linear-gradient(rgb(152, 152, 243) rgb(247, 142, 205));      
+} */
+
+body{   
+    height: 100%;
+    width: 100%;
     font-family:  'Sansita', sans-serif;
     color: darkblue; 
 }
 
 nav{
-    background-color: rgb(249, 160, 249);
+    background-color: rgb(254, 185, 254);
     padding: 5px 5px;
     margin: 20px;
     display:flex;
     flex-wrap: wrap;
     justify-content: space-around;
 }
-
 
 header{
     position: sticky;
@@ -116,7 +121,8 @@ footer{
 #name{
     text-align: center;
     font-size: 35px;
-    color: rgb(255, 13, 219);
+    color: black;
+    text-decoration: magenta underline;
 }
 
 #about{
@@ -127,11 +133,9 @@ footer{
 #images{
     margin-left: auto;
     margin-right: auto;
-    border-radius: 50%;
-    width: 355px;
+    border-radius: 100%;
+    width: 300px;
     display: block;
-   /* padding: 5px 5px;
-    margin: 55px;*/
 }
 
 #skills{
@@ -189,10 +193,6 @@ a:hover{
     text-decoration: underline;
 }
 
-#name:hover{
-    color: black;
-}
-
 .experience:hover{
     background: url(https://i.redd.it/ajobw0bcf0h41.jpg);
     color: yellow;
@@ -205,6 +205,69 @@ h1:hover{
 h2:hover{
     color: yellow;
 }
+/* Connections Buttons (Social Media) */
+.wrapper .button{
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    float: left;
+    margin: 0px 5px;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+    transition: all 0.3s ease-out;
+}
+
+.wrapper .button:hover{
+    width: 200px;
+}
+
+.wrapper .button .icon{
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    border-radius: 50%;
+    box-sizing: border-box;
+    line-height: 60px;
+    transition: all 0.3s ease-out;
+}
+
+.wrapper .button:nth-child(1):hover .icon {
+    background: #1DA1F2;}
+
+.wrapper .button:nth-child(2):hover .icon {
+    background: #4267B2;;}
+
+.wrapper .button:nth-child(3):hover .icon {
+    background: #333}
+
+.wrapper .button:nth-child(4):hover .icon {
+    background: rgb(240, 10, 182);}
+
+.wrapper .button .icon i{
+    font-size: 25px;
+    line-height: 60px;
+    transition: all 0.3s ease-out;
+    }
+
+.wrapper .button:hover .icon i{
+    color: #fff;
+}
+
+.wrapper .button span{
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 60px;
+    margin-left: 10px;
+}
+
+.wrapper .button:nth-child(1) span{color:#1DA1F2;}
+.wrapper .button:nth-child(2) span{color: #4267B2;}
+.wrapper .button:nth-child(3) span{color:#333;}
+.wrapper .button:nth-child(4) span{color: rgb(240, 10, 182);}
 
 /* Media Queries */
 @media print {
@@ -215,7 +278,16 @@ h2:hover{
 
 @media screen and (max-width:900px), (orientation: portrait) {
   body { 
-      background:rgb(255, 204, 185);
+      background:#e5f2fc;
     }
     
+}
+
+@media screen and (max-width:360px), (orientation: portrait) {
+    .nav-bar, ul{
+        text-align: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+
+    }
 }

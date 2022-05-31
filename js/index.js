@@ -1,9 +1,9 @@
 /* Footer name and year*/ 
-const today= new Date() 
-const thisYear= today.getFullYear()
+const currentYear= new Date() 
+const thisYear= currentYear.getFullYear()
 const footer= document.querySelector("footer")
 const copyright= document.createElement("p")
-copyright.innerHTML = thisYear + " Onella Powell " 
+copyright.innerHTML = "&copy;"+ thisYear + "- Onella Powell " 
 footer.appendChild(copyright)
 
 console.log(footer);
@@ -98,7 +98,7 @@ function toggleDarkMode() {
     // dark mode looks like a black background and the button will say Change to Light Mode
     if (textElement.style.backgroundColor == "black") {
         console.log("switch to darkmode");
-        textElement.style.backgroundColor = "#ffccb9"
+        textElement.style.backgroundColor = "#e5f2fc"
         darkModeBtnElement.innerHTML="Change to Dark Mode"
         for (var i = 0; i<textElement.length; i++) {
         }
@@ -114,5 +114,27 @@ function toggleDarkMode() {
         }
     }
 }
+
+// Fetch Github Repositories //
+let githubRequest = new XMLHttpRequest();
+githubRequest.open("GET" , "https://api.github.com/users/Nelly-OP/repos");
+githubRequest.send();
+
+// Handle Response from the Server //
+githubRequest.onload = function() {
+let repositories = JSON.parse(this.response);
+console.log(repositories);
+
+// Display List of Repositories //
+let projectSection = document.getElementById("projects");
+let projectList = projects.querySelector("ul");
+for (let i = 0; i < repositories.length; i++) {
+    let project = document.createElement("li");
+    let projectLinks = document.createElement("a");
+
+    project.innerHTML= repositories[i].name;
+    projectList.appendChild(project);
+}
+    };
 
 
