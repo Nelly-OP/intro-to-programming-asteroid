@@ -121,20 +121,16 @@ githubRequest.open("GET" , "https://api.github.com/users/Nelly-OP/repos");
 githubRequest.send();
 
 // Handle Response from the Server //
-githubRequest.onload = function() {
-let repositories = JSON.parse(this.response);
-console.log(repositories);
+githubRequest.addEventListener("load", () => {
+const repositories = JSON.parse(response);
 
 // Display List of Repositories //
 let projectSection = document.getElementById("projects");
 let projectList = projects.querySelector("ul");
+
 for (let i = 0; i < repositories.length; i++) {
     let project = document.createElement("li");
-    let projectLinks = document.createElement("a");
-
     project.innerHTML= repositories[i].name;
     projectList.appendChild(project);
 }
-    };
-
-
+    });
