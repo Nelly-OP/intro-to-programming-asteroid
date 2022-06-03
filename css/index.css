@@ -14,16 +14,17 @@ body{
 
 nav{
     background-color: rgb(254, 185, 254);
-    padding: 5px 5px;
+    height: 80px;
+    /* padding: 5px 5px;
     margin: 20px;
     display:flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-around; */
 }
 
 header{
     position: sticky;
-    background: /*rgb(255, 137, 226);*/ url(https://i.redd.it/ajobw0bcf0h41.jpg);
+    background: url(https://i.redd.it/ajobw0bcf0h41.jpg);
     padding: 5px 5px;
     margin: 15px 15px;
 }
@@ -117,25 +118,54 @@ footer{
     background:rgb(254, 185, 254);
 }
 
+/* Sudo Code */
+nav #images{
+    /* margin-left: auto;
+    margin-right: auto;
+    border-radius: 100%;
+    width: 300px;
+    display: block; */
+    width: 150px;
+    position: absolute;
+    top: 17px;
+    left: 12%;
+}
+
+nav #nav-unordered{
+    float: right;
+    margin-right: 25px;
+}
+
+nav #nav-unordered .nav-bar{
+display: inline-block;
+line-height: 80px;
+margin: 0 15px;
+}
+
+nav #nav-unordered .nav-bar .nav-link{
+    position: relative;
+    color: purple;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+nav #nav-unordered .nav-bar .nav-link:before{
+    position: absolute;
+    content: '';
+
+}
+
 /* ID Selectors*/
-#name{
+/* #name{
     text-align: center;
-    font-size: 35px;
+    font-size: 5px;
     color: black;
     text-decoration: magenta underline;
-}
+} */
 
 #about{
     padding: 2px 2px;
     margin: 5px 5px;
-}
-
-#images{
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 100%;
-    width: 300px;
-    display: block;
 }
 
 #skills{
@@ -155,14 +185,14 @@ footer{
 }
 
 /* Class Selectors */
-.nav-bar{
+/* .nav-bar{
     font-size: 20px;
     background: none;
     list-style: none;
     border-style: none;
     margin: 5px; 
 
-}
+} */
 
 .bio{
     border: dotted rgb(180, 2, 180) 10px;
