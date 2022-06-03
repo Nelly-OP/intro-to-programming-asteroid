@@ -115,22 +115,27 @@ function toggleDarkMode() {
     }
 }
 
-// Fetch Github Repositories //
-let githubRequest = new XMLHttpRequest();
-githubRequest.open("GET" , "https://api.github.com/users/Nelly-OP/repos");
-githubRequest.send();
 
-// Handle Response from the Server //
-githubRequest.addEventListener("load", () => {
-const repositories = JSON.parse(response);
-
-// Display List of Repositories //
+// Fetch API Github //
+fetch("https://api.github.com/users/Nelly-OP/repos")
+.then(response => response.json())
+.then(load => {
+    
+// Display List of Repositories in Browser //
 let projectSection = document.getElementById("projects");
-let projectList = projects.querySelector("ul");
-
-for (let i = 0; i < repositories.length; i++) {
+let projectList = projectSection.querySelector("ul");
+for (let i = 0; i < load.length; i++) {
     let project = document.createElement("li");
-    project.innerHTML= repositories[i].name;
+    let projectLinks = document.createElement("a");
+     projectLinks.className = "project-link";
+     projectLinks.href = load[i].html_url;
+    projectLinks.innerHTML= load[i].name;
+    project.className ="projects-li";
+
     projectList.appendChild(project);
+    project.appendChild(projectLinks);
+
 }
-    });
+
+})
+.catch(error => alert("We have a problem!", error));
