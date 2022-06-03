@@ -115,6 +115,7 @@ function toggleDarkMode() {
     }
 }
 
+
 // Fetch API Github //
 fetch("https://api.github.com/users/Nelly-OP/repos")
 .then(response => response.json())
@@ -130,13 +131,11 @@ for (let i = 0; i < load.length; i++) {
      projectLinks.href = load[i].html_url;
     projectLinks.innerHTML= load[i].name;
     project.className ="projects-li";
+
     projectList.appendChild(project);
     project.appendChild(projectLinks);
 
 }
+
 })
 .catch(error => alert("We have a problem!", error));
-    
-
-
-
