@@ -44,11 +44,6 @@ messageForm.addEventListener("submit", (event) => {
   /* Message dispaly */
   newMessage.innerHTML= `<a href = mailto:${email}>${name}</a> wrote:<span>${message}</span>` 
 
-  /* Hide  "messages section" */
-//   if (messageSection.style.display === "none"){
-//     messageSection.style.display = "block"
-// }
-
   /* Remove button */
   const removeButton= document.createElement("button");  
   removeButton.innerText= "remove";
@@ -88,7 +83,6 @@ messageForm.addEventListener("submit", (event) => {
             span.textContent= input.value;
             entry.removeChild(input);
             editButton.textContent= "edit";
-
     }    
   });
   newMessage.appendChild(editButton);
@@ -126,7 +120,6 @@ for (let i = 0; i < load.length; i++) {
     project.appendChild(projectLinks);
 
 }
-
 })
 .catch(error => alert("We have a problem!", error));
 
