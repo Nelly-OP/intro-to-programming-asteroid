@@ -13,30 +13,39 @@
      <header>
          <button onclick="toggleDarkMode()" id="darkModeButton">Mode</button>
 <section id= "home">
-    <nav>  
-        <ul>  
-          <li class="nav-bar"><a class="nav-link" href="#home">Home</a></li>
-          <li class="nav-bar"><a class="nav-link" href="#about">About</a></li>  
-          <li class="nav-bar"><a class="nav-link" href="#experience">Experience</a></li>  
-          <li class="nav-bar"><a class="nav-link" href="#skills">Skills</a></li>
-          <li class="nav-bar"><a class="nav-link" href="#connect">Connect</a></li>
-          <li class="nav-bar"><a class="nav-link" href="#images">Images</a></li>
-        </ul>  
+    <nav class= "navbar"> 
+        <div id="images">
+        <img src="file:///Users/nelly/Desktop/Screen%20Shot%202022-05-12%20at%2010.30.05%20AM.png" alt= Nelly>  
+        <!-- <p id="name">Onella Powell  Web Developer</p>      -->
+        </div>
+        <ul class= "nav-menu">  
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>  
+          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>  
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#connect">Connect</a></li>
+          <li class="nav-item"><a class="nav-link" href="#images">Images</a></li>
+        </ul> 
+        <div class= "hamburger">
+            <span class= "bar"></span>
+            <span class= "bar"></span>
+            <span class= "bar"></span>
+        </div>
     </nav>
 </section>
-<img id="images" src="file:///Users/nelly/Desktop/Screen%20Shot%202022-05-12%20at%2010.30.05%20AM.png" alt= Nelly>
-<p id= "name">Onella Powell<br> Web Developer</p>
 </header>
 <section id= "about">
     <h1>About</h1>
 </section>
 <p class= "bio">
 I'm a Stay At Home Mom & Travel Consultant,<br>
-I was Born on the beautiful Island of Jamaica, an island filled with rich and memorable experiences. I<br>
-attended the Kingston Technical High School where I majored in Business and Information Technology.<br>
-My teenage years where some of the best years of my life, then I migrated to the USA at the age of 19<br>
+I was Born on the beautiful Island of Jamaica, I
+attended the Kingston Technical High School where I majored in Business and Information Technology.
+My teenage years were some of the best years of my life, then I migrated to the USA at the age of 19
 which was the hardest teenage year I had, with all the changes and adjusting to a new environment and life.
-I became a Expanded Duties Dental Assistant after my first 2 years living in Atlanta until covid-19 hit 8 years later.
+I transition from my major to become a Expanded Duties Dental Assistant after my first 2 years of living in 
+Atlanta, as I was passionate about that field. After 8 years of loving what I did the world took a turn and 
+covid-19 pandemic entered. I'm now transitioning to the Tech field with the help of Code The Dream!.
 </p>
 <section id="experience">
     <h1>Experience</h1>
@@ -57,7 +66,6 @@ I became a Expanded Duties Dental Assistant after my first 2 years living in Atl
 <ul>
 
 </ul>
-
 </section>
     <section id ="leave-a-message">
         <h2>Leave a Message</h2>
@@ -72,14 +80,14 @@ I became a Expanded Duties Dental Assistant after my first 2 years living in Atl
         <button type= "submit">Submit</button>
         </form>
     </section>
-    <section id="messages">
+    <section id="messages" hidden> 
         <h2>Messages</h2>
     <ul>
 
     </ul>
     </section> 
     <section id="connect">
-        <h1>Connect</h1>
+        <h1 hidden>Connect</h1>
         <a href="https://twitter.com/Nellybabiidev" target="_blank"><div class= "wrapper">
             <div class= "button">
                 <div class= "icon">
@@ -98,7 +106,7 @@ I became a Expanded Duties Dental Assistant after my first 2 years living in Atl
                 <span>LinkedIn</span>
             </div>
            </div>
-     </a>
+         </a>
         <a href="https://github.com/Nelly-OP" target="_blank">
             <div class= "wrapper">
             <div class= "button">

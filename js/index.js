@@ -23,6 +23,10 @@ const skillsList = skillsSection.querySelector("ul")
     const messageForm= document.getElementsByTagName("form")[0]; 
     console.log(messageForm);
 
+    /* List of message dispaly */
+const messageSection= document.querySelector("#messages"); 
+const messageList= messageSection.querySelector("ul");
+
     /* Submitting Form */
 messageForm.addEventListener("submit", (event) => { 
     event.preventDefault();
@@ -32,9 +36,6 @@ messageForm.addEventListener("submit", (event) => {
 
   console.log(event.target.name.value,event.target.email.value,event.target.message.value);
 
-  /* List of message dispaly */
-  const messageSection= document.querySelector("#messages"); 
-  const messageList= messageSection.querySelector("ul");
   const newMessage= document.createElement("li"); 
 
   console.log(email);
@@ -49,6 +50,12 @@ messageForm.addEventListener("submit", (event) => {
   removeButton.addEventListener("click", (event) => {
       const entry= event.target.parentNode;
       entry.remove();
+      if(messageList.children.length === 0){
+        messageSection.style.display ="none";
+    }else{
+    messageSection.style.display = "block";
+    console.log("inside", messageList.children.length);
+    }
   });
 
   /* Edit Button */
@@ -82,7 +89,53 @@ messageForm.addEventListener("submit", (event) => {
   newMessage.appendChild(removeButton);
   messageList.appendChild(newMessage);
   messageForm.reset();
+
+  if(messageList.children.length === 0){
+    messageSection.style.display ="none";
+}else{
+    messageSection.style.display = "block";
+    console.log("inside", messageList.children.length);
+    }
 });
+
+console.log("outside", messageList.children.length);
+
+// Fetch API Github //
+fetch("https://api.github.com/users/Nelly-OP/repos")
+.then(response => response.json())
+.then(load => {
+    
+// Display List of Repositories in Browser //
+let projectSection = document.getElementById("projects");
+let projectList = projectSection.querySelector("ul");
+for (let i = 0; i < load.length; i++) {
+    let project = document.createElement("li");
+    let projectLinks = document.createElement("a");
+     projectLinks.className = "project-link";
+     projectLinks.href = load[i].html_url;
+    projectLinks.innerHTML= load[i].name;
+    project.className ="projects-li";
+
+    projectList.appendChild(project);
+    project.appendChild(projectLinks);
+
+}
+})
+.catch(error => alert("We have a problem!", error));
+
+/* Hamburger Menu */
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav-menu");
+
+hamburger.addEventListener("click", () =>{
+    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("active");
+})
+
+document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
+    hamburger.classList.remove("active");
+    navMenu.classList.remove("active");
+}))
 
 /* Dark & Light Mode */
 function toggleDarkMode() {
@@ -110,32 +163,7 @@ function toggleDarkMode() {
         console.log("switch to light mode");
         textElement.style.backgroundColor = "black"
         darkModeBtnElement.innerHTML="Change to Light Mode"
-        for (var i = 0; i<textElement.length; i++) {
+        for (var i = 0; i < textElement.length; i++) {
         }
     }
 }
-
-
-// Fetch API Github //
-fetch("https://api.github.com/users/Nelly-OP/repos")
-.then(response => response.json())
-.then(load => {
-    
-// Display List of Repositories in Browser //
-let projectSection = document.getElementById("projects");
-let projectList = projectSection.querySelector("ul");
-for (let i = 0; i < load.length; i++) {
-    let project = document.createElement("li");
-    let projectLinks = document.createElement("a");
-     projectLinks.className = "project-link";
-     projectLinks.href = load[i].html_url;
-    projectLinks.innerHTML= load[i].name;
-    project.className ="projects-li";
-
-    projectList.appendChild(project);
-    project.appendChild(projectLinks);
-
-}
-
-})
-.catch(error => alert("We have a problem!", error));
